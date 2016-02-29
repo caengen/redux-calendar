@@ -18,7 +18,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var historyApiFallback = require('connect-history-api-fallback');
 
-gulp.task('styles',function() {
+gulp.task('styles', function () {
   // move over fonts
   /*gulp.src('css/fonts/**.*')
     .pipe(gulp.dest('build/css/fonts'))*/
@@ -29,35 +29,35 @@ gulp.task('styles',function() {
     .pipe(stylus())
     .pipe(autoprefixer())
     .pipe(gulp.dest('./build/'))
-    .pipe(reload({stream:true}));
+    .pipe(reload({ stream:true }));
 });
 
-gulp.task('images',function(){
+gulp.task('images', function () {
   //gulp.src('./src/vectors')
   //  .pipe(gulp.dest('./build/vectors'));
 });
 
-gulp.task('browser-sync', function() {
-    browserSync({
-        proxy : 'http://localhost:3000',
-        middleware : [ historyApiFallback() ],
-        ghostMode : false,
-    });
+gulp.task('browser-sync', function () {
+  browserSync({
+    proxy:'http://localhost:3000',
+    middleware:[historyApiFallback()],
+    ghostMode:false,
+  });
 });
 
 function handleErrors() {
   var args = Array.prototype.slice.call(arguments);
   notify.onError({
     title: 'Compile Error',
-    message: '<%= error.message %>'
+    message: '<%= error.message %>',
   }).apply(this, args);
   this.emit('end'); // Keep gulp from hanging on this task
 }
 
 function buildScript(file, watch) {
   var props = {
-    entries: ['./' + file],
-    debug : true,
+    entries:['./' + file],
+    debug:true,
   };
 
   var bundler = watch ? watchify(browserify(props)) : browserify(props);
@@ -67,14 +67,14 @@ function buildScript(file, watch) {
     return stream
       .on('error', handleErrors)
       .pipe(source(file))
-      //.pipe(buffer())
-      //.pipe(uglify())
+      /*.pipe(buffer())
+      .pipe(uglify())*/
       .pipe(rename('app.min.js'))
       .pipe(gulp.dest('./build'))
-      .pipe(reload({stream:true}));
+      .pipe(reload({ stream:true }));
   }
 
-  bundler.on('update', function() {
+  bundler.on('update', function () {
     rebundle();
     gutil.log('Rebundle...');
   });
@@ -82,11 +82,11 @@ function buildScript(file, watch) {
   return rebundle();
 }
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
   return buildScript('/src/app.jsx', false);
 });
 
-gulp.task('default', ['images','styles','scripts','browser-sync'], function() {
+gulp.task('default', ['images', 'styles', 'scripts', 'browser-sync'], function () {
   gulp.watch('src/**/*.scss', ['styles']);
   return buildScript('/src/app.jsx', true);
 });
