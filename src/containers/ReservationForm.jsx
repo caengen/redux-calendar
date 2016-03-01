@@ -11,20 +11,20 @@ const mapDispatchToProps = (dispatch) => {
 export const ReservationForm = ({}) => (
   <form className="reservation-form">
     Name:
-    <br>
+    <br />
       <input type="text" name="name" />
-    </br>
+    <br />
     Reservation start:
-    <br>
+    <br />
       <input type="date" name="start" />
-    </br>
+    <br />
     Reservation end:
-    <br>
+    <br />
       <input type="date" name="end" />
-    </br>
+    <br />
     Guests:
-    <br>
+    <br />
       <input type="number" name="guests" min="1" max="6" />
-    </br>
+    <br />
   </form>
 );
