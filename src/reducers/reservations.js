@@ -6,8 +6,9 @@ const reservation = (state, action) => {
     case types.ADD_RESERVATION:
       return {
         id: reservationId++,
-        startDate: action.startDate,
-        endDate: action.endDate,
+        reserver: action.reserver,
+        start: action.start,
+        end: action.end,
         roomId: action.roomId,
         guests: action.guests,
       };
@@ -24,9 +25,9 @@ export const reservations = (state = [], action) => {
         reservation(undefined, action),
       ];
     case types.REMOVE_RESERVATION:
-      return undefined;
+      return state;
     case types.UPDATE_RESERVATION:
-      return undefined;
+      return state;
     default:
       return state;
   }

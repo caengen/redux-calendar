@@ -1,16 +1,20 @@
 import React from 'react';
 import DOM from 'react-dom';
-import { Planner } from './containers/Planner.jsx';
+import { Provider, connect } from 'react-redux';
+import { ReservationForm } from './containers/ReservationForm.jsx';
+import { rooms } from './reducers/rooms';
+import { reservations } from './reducers/reservations';
 import { createStore, combineReducers } from 'redux';
 
 const PlannerApp = () => (
   <div className="app">
-    <Planner />
+    <ReservationForm />
   </div>
 );
 
 const plannerApp = combineReducers(
-
+  reservations,
+  rooms
 );
 
 const store = createStore(plannerApp);
