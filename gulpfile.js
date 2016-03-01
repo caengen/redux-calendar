@@ -42,6 +42,7 @@ gulp.task('browser-sync', function () {
     proxy:'http://localhost:3000',
     middleware:[historyApiFallback()],
     ghostMode:false,
+    port: 3002,
   });
 });
 

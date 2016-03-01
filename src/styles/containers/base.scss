@@ -1,0 +1,13 @@
+body {
+  @include outer-container;
+  padding: 1em;
+  @include font-size();
+  font-family: $base-font-family;
+  color: $black;
+
+  input {
+    @include font-size();
+    font-family: $base-font-family;
+    color: $black;  
+  }
+}

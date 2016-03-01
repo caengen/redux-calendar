@@ -14,13 +14,10 @@ export const ReservationForm = ({}) => (
     <br />
       <input type="text" name="name" />
     <br />
-    Reservation start:
+    Reservation
     <br />
-      <input type="date" name="start" />
-    <br />
-    Reservation end:
-    <br />
-      <input type="date" name="end" />
+    start:<input type="date" name="start" />
+    end:<input type="date" name="end" />
     <br />
     Guests:
     <br />
