@@ -1,3 +1,6 @@
 .form-cover {
   @include span-columns(12);
+  img {
+    width: inherit;
+  }
 }

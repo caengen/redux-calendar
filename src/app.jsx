@@ -13,11 +13,11 @@ const PlannerApp = () => (
   </div>
 );
 
-const plannerApp = combineReducers(
+const plannerApp = combineReducers({
   formCovers,
   reservations,
-  rooms
-);
+  rooms,
+});
 
 const store = createStore(plannerApp);
 

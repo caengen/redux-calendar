@@ -1,10 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import * as actions from '../actions/ReservationActions';
 
-const mapStoreToProps = (store) => {
+const mapStoreToProps = (state) => {
+  console.log(state);
   return {
-    url: store.formCover.url,
-    alt: store.formCover.alt,
+    url: state.formCovers.url,
+    alt: state.formCovers.alt,
   };
 };
 
@@ -13,10 +15,16 @@ const mapDispatchToProps = (dispatch) => {
   return {};
 };
 
-export const FormCover = ({ url, alt }) => {
+const Cover = ({ url, alt }) => {
+  console.log(url);
   return (
     <figure className='form-cover'>
       <img src={url} alt={alt} />
     </figure>
   );
 };
+
+export const FormCover = connect(
+  mapStoreToProps,
+  mapDispatchToProps
+)(Cover);
