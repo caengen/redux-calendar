@@ -2,9 +2,9 @@ import React from 'react';
 import DOM from 'react-dom';
 import { Provider, connect } from 'react-redux';
 import { ReservationForm } from './containers/ReservationForm.jsx';
-import { rooms } from './reducers/rooms';
-import { reservations } from './reducers/reservations';
-import { formCovers } from './reducers/formCovers';
+import rooms from './reducers/rooms';
+import reservations from './reducers/reservations';
+import formCovers from './reducers/formCovers';
 import { createStore, combineReducers } from 'redux';
 
 const PlannerApp = () => (

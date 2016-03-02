@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { covers } from '../constants/covers';
 import * as actions from '../actions/ReservationActions';
 
 const mapStoreToProps = (state) => {
   console.log(state);
   return {
-    url: state.formCovers.url,
-    alt: state.formCovers.alt,
+    url: covers[state.formCovers].url,
+    alt: covers[state.formCovers].alt,
   };
 };
 

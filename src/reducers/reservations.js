@@ -1,11 +1,11 @@
 import * as types from '../constants/ActionTypes';
 
-let reservationId = 0;
+
 const reservation = (state, action) => {
   switch (action.type) {
     case types.ADD_RESERVATION:
       return {
-        id: reservationId++,
+        id: action.id,
         reserver: action.reserver,
         start: action.start,
         end: action.end,
@@ -17,7 +17,7 @@ const reservation = (state, action) => {
   }
 };
 
-export const reservations = (state = [], action) => {
+const reservations = (state = [], action) => {
   switch (action.Type) {
     case types.ADD_RESERVATION:
       return [
@@ -32,3 +32,5 @@ export const reservations = (state = [], action) => {
       return state;
   }
 };
+
+export default reservations;
