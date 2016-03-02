@@ -1,13 +1,12 @@
 body {
-  @include outer-container;
-  padding: 1em;
   @include font-size();
   font-family: $base-font-family;
   color: $black;
+  margin: 0;
 
   input {
     @include font-size();
     font-family: $base-font-family;
-    color: $black;  
+    color: $black;
   }
 }

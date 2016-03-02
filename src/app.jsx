@@ -2,8 +2,9 @@ import React from 'react';
 import DOM from 'react-dom';
 import { Provider, connect } from 'react-redux';
 import { ReservationForm } from './containers/ReservationForm.jsx';
-import { rooms } from './reducers/rooms';
-import { reservations } from './reducers/reservations';
+import rooms from './reducers/rooms';
+import reservations from './reducers/reservations';
+import formCovers from './reducers/formCovers';
 import { createStore, combineReducers } from 'redux';
 
 const PlannerApp = () => (
@@ -12,10 +13,11 @@ const PlannerApp = () => (
   </div>
 );
 
-const plannerApp = combineReducers(
+const plannerApp = combineReducers({
+  formCovers,
   reservations,
-  rooms
-);
+  rooms,
+});
 
 const store = createStore(plannerApp);
 

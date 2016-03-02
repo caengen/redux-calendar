@@ -33,8 +33,8 @@ gulp.task('styles', function () {
 });
 
 gulp.task('images', function () {
-  //gulp.src('./src/vectors')
-  //  .pipe(gulp.dest('./build/vectors'));
+  gulp.src('./src/res/img/*.jpg')
+    .pipe(gulp.dest('./build/res/img/'));
 });
 
 gulp.task('browser-sync', function () {
