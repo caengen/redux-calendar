@@ -1,6 +1,14 @@
 .form-cover {
   @include span-columns(12);
+  height: em(300);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
   img {
-    width: inherit;
+    max-width: none;
+    min-width: 100%;
+    min-height: 100%;
   }
 }

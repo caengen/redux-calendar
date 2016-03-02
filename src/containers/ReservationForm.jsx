@@ -11,7 +11,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const Form = ({}) => (
-  <div>
+  <header>
     <FormCover />
     <form className="reservation-form">
       Name:
@@ -28,7 +28,7 @@ const Form = ({}) => (
       <input type="number" name="guests" min="1" max="6" />
       <br />
     </form>
-  </div>
+  </header>
 );
 
 export const ReservationForm = connect(

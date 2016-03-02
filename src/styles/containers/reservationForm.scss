@@ -1,8 +1,11 @@
 .reservation-form {
   padding: 1em;
-  display: inline-block;
+  position: relative;
+  display: block;
+  width: 600px;
+  margin: 1.5em auto;
   background: $alabaster;
-
+  z-index: 10;
   input {
     @include material-input;
   }

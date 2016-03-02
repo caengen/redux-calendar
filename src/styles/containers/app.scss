@@ -1,3 +1,6 @@
 .app {
-  @include outer-container;
+
+  header {
+    @include outer-container;
+  }
 }
