@@ -12,7 +12,6 @@ const mapDispatchToProps = (dispatch) => {
 
 const Form = ({}) => (
   <header>
-    <FormCover />
     <form className="reservation-form">
       Name:
       <br />
