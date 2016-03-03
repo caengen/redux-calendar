@@ -18,7 +18,7 @@ const initialState = [
     img: '',
   },
   {
-    id: 0,
+    id: 3,
     firstName: 'Lasse',
     lastName: 'Lindtner',
     img: '',

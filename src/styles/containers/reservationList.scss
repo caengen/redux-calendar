@@ -1,0 +1,24 @@
+.reservation-list {
+  @include span-columns(12);
+  list-style-type: none;
+  padding: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+.list-item {
+  background: $athens-gray;
+  margin: .5em 0;
+  padding: .5em;
+}
+
+.profile-fig {
+  display: inline-block;
+  background: $primary-color;
+  height: 1.5em;
+  width: 2.5em;
+  padding: 1.5em;
+  color: $white;
+  border-radius: 50%;
+}
