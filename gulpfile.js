@@ -33,8 +33,8 @@ gulp.task('styles', function () {
 });
 
 gulp.task('images', function () {
-  //gulp.src('./src/vectors')
-  //  .pipe(gulp.dest('./build/vectors'));
+  gulp.src('./src/res/img/*.jpg')
+    .pipe(gulp.dest('./build/res/img/'));
 });
 
 gulp.task('browser-sync', function () {
@@ -42,6 +42,7 @@ gulp.task('browser-sync', function () {
     proxy:'http://localhost:3000',
     middleware:[historyApiFallback()],
     ghostMode:false,
+    port: 3002,
   });
 });
 

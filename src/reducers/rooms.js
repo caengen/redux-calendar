@@ -33,9 +33,11 @@ const initialState = [
   },
 ];
 
-export const rooms = (state = initialState, action) => {
+const rooms = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state;
   }
 };
+
+export default rooms;
