@@ -2,17 +2,20 @@ import React from 'react';
 import moment from 'moment';
 import { connect } from 'react-redux';
 
-const getUserInitials = (userId, users) => {
-  console.log(userId);console.log(users);
-  return `${users[userId].firstName.charAt(0)}${users[userId].lastName.charAt(0)}`;
+const name = (userId, users) => {
+  return `${users[userId].firstName} ${users[userId].lastName}`;
+};
+
+const initials = (name) => {
+  return name.split(' ').map((s) => { return s.charAt(0); });
 };
 
 const guests = (guestIds, users) => {
   return guestIds.map((id) => {
     return (
-      <li>
-        <figure className='profile-fig'>
-          <strong>{getUserInitials(id, users)}</strong>
+      <li key={id} title={name(id, users)} className='li-guests'>
+        <figure>
+          <strong>{initials(name(id, users))}</strong>
         </figure>
       </li>
     );
@@ -38,9 +41,9 @@ const mapDispatchToProps = (dispatch) => {
 const ListItem = ({ reservation, users, rooms }) => {
   return (
     <li>
-        <header>
-          <figure className='profile-fig'>
-            <strong>{getUserInitials(reservation.reserverId, users)}</strong>
+        <header className='reservation'>
+          <figure>
+            <strong>{initials(name(reservation.reserverId, users))}</strong>
           </figure>
         </header>
         <div className='li-content'>
@@ -54,7 +57,10 @@ const ListItem = ({ reservation, users, rooms }) => {
             <small>{`${pretty(reservation.date.start)} - ${pretty(reservation.date.end)}`}</small>
           </div>
           <div className='guests'>
-            <span></span>
+            <span className='label'>{'Gjester: '}</span>
+            <ul className='ul-guests'>
+              {guests(reservation.guestIds, users)}
+            </ul>
           </div>
         </div>
     </li>

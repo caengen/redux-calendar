@@ -1,3 +1,21 @@
 @mixin material-shadow {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+
+@mixin profile-fig($dimension, $font-size) {
+  @include span-columns(1 of 12)
+  background: $primary-color;
+  border-radius: 50%;
+  margin: 0;
+  color: $white;
+  text-align: center;
+  transform-style: preserve-3d;
+  height: $dimension;
+  width: $dimension;
+  strong {
+    width: 100%;
+    @include font-size($font-size);
+    @include vertical-align(absolute);
+    left: 0;
+  }
+}
