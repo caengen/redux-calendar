@@ -2,6 +2,7 @@ export const reservationData = [
   {
     id: 0,
     reserverId: 0,
+    timestamp: '16/01/2016',
     guestIds: [0, 1],
     roomId: 0,
     date: {
@@ -12,6 +13,7 @@ export const reservationData = [
   {
     id: 1,
     reserverId: 2,
+    timestamp: '27/02/2016',
     guestIds: [2, 3],
     roomId: 1,
     date: {
@@ -22,6 +24,7 @@ export const reservationData = [
   {
     id: 2,
     reserverId: 3,
+    timestamp: '27/02/2016',
     guestIds: [3],
     roomId: 1,
     date: {

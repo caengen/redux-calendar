@@ -2,23 +2,33 @@
   @include span-columns(12);
   list-style-type: none;
   padding: 0;
+  margin: 0;
   li {
     list-style-type: none;
   }
 }
 
 .list-item {
+  @include span-columns(8);
   background: $athens-gray;
   margin: .5em 0;
-  padding: .5em;
 }
 
 .profile-fig {
-  display: inline-block;
+  @include span-columns(1)
   background: $primary-color;
-  height: 1.5em;
-  width: 2.5em;
-  padding: 1.5em;
-  color: $white;
   border-radius: 50%;
+  margin: 0;
+  height: 3.5em;
+  width: 3.5em;
+  color: $white;
+  text-align: center;
+  transform-style: preserve-3d;
+
+  strong {
+    width: 100%;
+    @include font-size(2);
+    @include vertical-align(absolute);
+    left: 0;
+  }
 }

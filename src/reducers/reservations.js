@@ -6,6 +6,7 @@ const reservation = (state, action) => {
     case types.ADD_RESERVATION:
       return {
         id: action.id,
+        timestamp: Date.now(),
         reserverId: action.reserver,
         guestIds,
         roomId: action.roomId,
