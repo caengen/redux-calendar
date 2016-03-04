@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import { connect } from 'react-redux';
 
 const getUserInitials = (userId, users) => {
@@ -18,6 +19,10 @@ const guests = (guestIds, users) => {
   });
 };
 
+const pretty = (time) => {
+  return moment(time, 'DD-MM-YYYY').format('MMM Do');
+};
+
 const mapStateToProps = (state, ownProps) => {
   return {
     reservation: { ...ownProps },
@@ -33,18 +38,25 @@ const mapDispatchToProps = (dispatch) => {
 const ListItem = ({ reservation, users, rooms }) => {
   return (
     <li>
-      <div className='list-item'>
-        <figure className='profile-fig'>
-          <strong>{getUserInitials(reservation.reserverId, users)}</strong>
-        </figure>
-        <div className='list-item-content'>
-          <strong>{`${users[reservation.reserverId].firstName}
-            ${users[reservation.reserverId].lastName}`}</strong>
-          <small>{reservation.timestamp}</small>
-          <span>{rooms[reservation.roomId].title}</span>
-          <span></span>
+        <header>
+          <figure className='profile-fig'>
+            <strong>{getUserInitials(reservation.reserverId, users)}</strong>
+          </figure>
+        </header>
+        <div className='li-content'>
+          <div className='reserver'>
+            <span>{`${users[reservation.reserverId].firstName}
+              ${users[reservation.reserverId].lastName}`}</span>
+            <small>{pretty(reservation.timestamp)}</small>
+          </div>
+          <div className='room'>
+            <span>{rooms[reservation.roomId].title}</span>
+            <small>{`${pretty(reservation.date.start)} - ${pretty(reservation.date.end)}`}</small>
+          </div>
+          <div className='guests'>
+            <span></span>
+          </div>
         </div>
-      </div>
     </li>
   );
 };

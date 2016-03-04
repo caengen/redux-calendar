@@ -5,19 +5,43 @@
   margin: 0;
   li {
     list-style-type: none;
+    @include span-columns(12);
+    margin: .5em 0;
+    padding: .5em;
+
+    header {
+      @include span-columns(2);
+    }
   }
 }
 
-.list-item {
-  @include span-columns(12);
-  background: $athens-gray;
-  margin: .5em 0;
-}
-
-.list-item-content {
-  @include span-columns(11)
-  strong {
+.li-content {
+  @include span-columns(10)
+  border-bottom: 1px solid $athens-gray;
+  div {
     @include span-columns(12);
+  }
+
+  .reserver {
+    span {
+      float: left;
+    }
+    small {
+      float: right;
+    }
+  }
+
+  .room {
+    span {
+      float: left;
+    }
+    small {
+      float: right;
+    }
+  }
+
+  .guests {
+
   }
 }
 
@@ -26,8 +50,8 @@
   background: $primary-color;
   border-radius: 50%;
   margin: 0;
-  height: 3.5em;
-  width: 3.5em;
+  height: 3em;
+  width: 3em;
   color: $white;
   text-align: center;
   transform-style: preserve-3d;

@@ -22,7 +22,6 @@ const _ReservationList = ({ reservations }) => {
 
   return (
     <section>
-      <h3>upcoming</h3>
       <ul className="reservation-list">
         { listItems }
       </ul>
