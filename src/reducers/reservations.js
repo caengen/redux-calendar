@@ -18,7 +18,7 @@ const reservation = (state, action) => {
 };
 
 const reservations = (state = reservationData, action) => {
-  switch (action.Type) {
+  switch (action.type) {
     case types.ADD_RESERVATION:
       return [
         ...state,
@@ -30,6 +30,13 @@ const reservations = (state = reservationData, action) => {
       return state;
     default:
       return state;
+  }
+};
+
+const visibilityFilter = (state = types.ALL_RESERVATIONS_VISIBLE, action) => {
+  switch (action.type) {
+    default:
+      return action.visibilityFilter;
   }
 };
 
