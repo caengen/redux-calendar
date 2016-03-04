@@ -13,16 +13,16 @@ const mapDispatchToProps = (dispatch) => {
 const Form = ({}) => (
   <header className="reservation-form">
     <form>
-      Name:
+      Navn:
       <br />
       <input type="text" name="name" />
       <br />
-      Reservation
+      Reservasjon
       <br />
       start:<input type="date" name="start" />
-      end:<input type="date" name="end" />
+      slutt:<input type="date" name="end" />
       <br />
-      Guests:
+      Gjester:
       <br />
       <input type="number" name="guests" min="1" max="6" />
       <br />

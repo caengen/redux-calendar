@@ -13,13 +13,13 @@ const mapDispatchToProps = () => {
 const ListFilter = () => {
   return (
     <header className='reservation-list-filter'>
-      <h2>Reservations</h2>
+      <h2>Reservasjoner</h2>
       <div>
         <a href='#'>
-          All
+          Alle
         </a>
         <a href='#'>
-          My
+          Mine
         </a>
       </div>
     </header>

@@ -23,6 +23,36 @@ const initialState = [
     lastName: 'Lindtner',
     img: '',
   },
+  {
+    id: 4,
+    firstName: 'Morten',
+    lastName: 'Ottersen',
+    img: '',
+  },
+  {
+    id: 5,
+    firstName: 'Riza',
+    lastName: 'Ottersen',
+    img: '',
+  },
+  {
+    id: 6,
+    firstName: 'Martin',
+    lastName: 'Ottersen',
+    img: '',
+  },
+  {
+    id: 7,
+    firstName: 'Mariel',
+    lastName: 'Ottersen',
+    img: '',
+  },
+  {
+    id: 8,
+    firstName: 'Markus',
+    lastName: 'Ottersen',
+    img: '',
+  },
 ];
 
 const users = (state = initialState, action) => {

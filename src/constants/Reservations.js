@@ -6,8 +6,8 @@ export const reservationData = [
     guestIds: [0, 1],
     roomId: 0,
     date: {
-      start: '21/05/2016',
-      end: '25/06/2016',
+      start: '21/06/2016',
+      end: '25/07/2016',
     },
   },
   {
@@ -17,8 +17,8 @@ export const reservationData = [
     guestIds: [2, 3],
     roomId: 1,
     date: {
-      start: '21/05/2016',
-      end: '15/06/2016',
+      start: '21/06/2016',
+      end: '15/07/2016',
     },
   },
   {
@@ -28,8 +28,19 @@ export const reservationData = [
     guestIds: [3],
     roomId: 1,
     date: {
-      start: '16/06/2016',
-      end: '25/06/2016',
+      start: '16/07/2016',
+      end: '25/08/2016',
+    },
+  },
+  {
+    id: 3,
+    reserverId: 4,
+    timestamp: '16/04/2016',
+    guestIds: [4, 5, 6, 7, 8],
+    roomId: 2,
+    date: {
+      start: '19/06/2016',
+      end: '07/07/2016',
     },
   },
 ];
