@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/ReservationActions';
+import { ReservationListFilter } from './ReservationListFilter.jsx';
 import { ReservationListItem } from './ReservationListItem.jsx';
 
 const mapStateToProps = (state) => {
@@ -21,11 +22,14 @@ const _ReservationList = ({ reservations }) => {
   });
 
   return (
-    <section>
-      <ul className="reservation-list">
-        { listItems }
-      </ul>
-    </section>
+    <div className="reservation-list">
+      <ReservationListFilter />
+      <section>
+        <ul>
+          { listItems }
+        </ul>
+      </section>
+    </div>
   );
 };
 
