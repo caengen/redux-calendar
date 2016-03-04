@@ -1,5 +1,4 @@
 body {
-  @include font-size();
   font-family: $base-font-family;
   color: $black;
   margin: 0;
@@ -8,5 +7,10 @@ body {
     @include font-size();
     font-family: $base-font-family;
     color: $black;
+  }
+
+  h3 {
+    color: $black;
+    @include font-size();
   }
 }

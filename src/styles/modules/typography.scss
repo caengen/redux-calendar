@@ -8,3 +8,11 @@ $weight-bold: 600;
   font-size: ($sizeValue * 10) + px;
   font-size: $sizeValue + rem;
 }
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

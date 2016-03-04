@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { FormCover } from './FormCover.jsx';
 
-const mapStoreToProps = (state) => {
+const mapStateToProps = (state) => {
   return {};
 };
 
@@ -11,9 +11,8 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const Form = ({}) => (
-  <header>
-    <FormCover />
-    <form className="reservation-form">
+  <header className="reservation-form">
+    <form>
       Name:
       <br />
       <input type="text" name="name" />
@@ -32,6 +31,6 @@ const Form = ({}) => (
 );
 
 export const ReservationForm = connect(
-  mapStoreToProps,
+  mapStateToProps,
   mapDispatchToProps
 )(Form);
