@@ -1,20 +1,22 @@
 .reservation-list {
   @include span-columns(3);
   height: 100%;
+  padding: .5em;
   border-right: 1px solid $athens-gray;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  li {
+
+  ul {
     list-style-type: none;
-    @include span-columns(12);
+    padding: 0;
+    margin: 0;
+    li {
+      list-style-type: none;
+      @include span-columns(12);
 
-    padding: .5em;
-
-    header {
-      @include span-columns(2);
-      figure {
-        @include profile-fig(3em, 1);
+      header {
+        @include span-columns(2);
+        figure {
+          @include profile-fig(3em, 1);
+        }
       }
     }
   }
@@ -22,10 +24,10 @@
 
 .li-content {
   @include span-columns(10)
-  padding: .5em;
   border-bottom: 1px solid $athens-gray;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
   div {
-
     @include span-columns(12);
   }
 
