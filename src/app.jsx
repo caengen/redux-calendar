@@ -11,8 +11,8 @@ import { createStore, combineReducers } from 'redux';
 
 const PlannerApp = () => (
   <div className="app">
-    <ReservationForm />
     <ReservationList />
+    <ReservationForm />
   </div>
 );
 

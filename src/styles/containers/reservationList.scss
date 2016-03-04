@@ -1,5 +1,5 @@
 .reservation-list {
-  @include span-columns(12);
+  @include span-columns(4);
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -9,13 +9,20 @@
 }
 
 .list-item {
-  @include span-columns(8);
+  @include span-columns(12);
   background: $athens-gray;
   margin: .5em 0;
 }
 
+.list-item-content {
+  @include span-columns(11)
+  strong {
+    @include span-columns(12);
+  }
+}
+
 .profile-fig {
-  @include span-columns(1)
+  @include span-columns(1 of 12)
   background: $primary-color;
   border-radius: 50%;
   margin: 0;

@@ -37,7 +37,7 @@ const ListItem = ({ reservation, users, rooms }) => {
         <figure className='profile-fig'>
           <strong>{getUserInitials(reservation.reserverId, users)}</strong>
         </figure>
-        <div>
+        <div className='list-item-content'>
           <strong>{`${users[reservation.reserverId].firstName}
             ${users[reservation.reserverId].lastName}`}</strong>
           <small>{reservation.timestamp}</small>

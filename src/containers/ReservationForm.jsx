@@ -11,8 +11,8 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const Form = ({}) => (
-  <header>
-    <form className="reservation-form">
+  <header className="reservation-form">
+    <form>
       Name:
       <br />
       <input type="text" name="name" />
