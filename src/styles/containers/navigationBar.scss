@@ -1,0 +1,51 @@
+.navigation-bar {
+  @include span-columns(12);
+  border-bottom: 1px solid $athens-gray;
+  height: 4.2rem;
+  @include font-size(1.2);
+  a {
+    cursor: pointer;
+  }
+  i {
+    line-height: 4.2rem;
+    vertical-align: middle;
+    text-align: center;
+    @include font-size(2.2);
+  }
+
+  span {
+    margin-left: 1em;
+  }
+
+  .left {
+    @include span-columns(3);
+    i {
+      color: white;
+      background: $primary-color-light;
+      height: 4.2rem;
+      width: 4.2rem;
+    }
+  }
+  .right {
+    @include span-columns(9);
+
+    .login {
+      @include shift(7.5);
+      @include span-columns(3);
+      color: $black;
+      text-align: right;
+    }
+
+    .logo {
+      @include span-columns(3);
+      float: right;
+      text-align: center;
+      vertical-align: middle;
+      color: white;
+      background: $primary-color-light;
+      height: 4.2rem;
+      width: 4.2rem;
+      line-height: 4.2rem;
+    }
+  }
+}

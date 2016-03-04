@@ -11,26 +11,26 @@ const mapDispatchToProps = () => {
 
 const Bar = () => {
   return (
-    <nav>
+    <nav className='navigation-bar'>
       <div className='left'>
         <a>
           <div>
             <i className='material-icons'>menu</i>
-            Meny
+            <span>Meny</span>
           </div>
         </a>
       </div>
       <div className='right'>
-        <a>
+        <a className='login'>
           <div>
             <i className='material-icons'>account_circle</i>
-            Login
+            <span>Logg inn</span>
           </div>
         </a>
+        <a className='logo'>
           <div>
-            Σ
+            <i className='material-icons'>Σ</i>
           </div>
-        <a>
         </a>
       </div>
     </nav>
