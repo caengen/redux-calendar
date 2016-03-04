@@ -3,6 +3,7 @@ import DOM from 'react-dom';
 import { Provider, connect } from 'react-redux';
 import { ReservationForm } from './containers/ReservationForm.jsx';
 import { ReservationList } from './containers/ReservationList.jsx';
+import { NavigationBar } from './containers/NavigationBar.jsx';
 import rooms from './reducers/rooms';
 import reservations from './reducers/reservations';
 import users from './reducers/users';
@@ -11,6 +12,7 @@ import { createStore, combineReducers } from 'redux';
 
 const PlannerApp = () => (
   <div className="app">
+    <NavigationBar />
     <ReservationList />
     <ReservationForm />
   </div>
