@@ -4,7 +4,7 @@ const initialState = [
     beds: 2,
     bathroom: true,
     kitchen: false,
-    title: 'Room 1',
+    title: 'Rom 1',
     description: 'Great room, very cheap sun all day',
   },
   {
@@ -12,7 +12,7 @@ const initialState = [
     beds: 3,
     bathroom: true,
     kitchen: false,
-    title: 'Room 2',
+    title: 'Rom 2',
     description: 'Very big room, also very cheap sun all day',
   },
   {
@@ -20,7 +20,7 @@ const initialState = [
     beds: 3,
     bathroom: true,
     kitchen: true,
-    title: 'Room 3',
+    title: 'Rom 3',
     description: 'Also a big room, very cheap sun all day',
   },
   {
@@ -28,7 +28,7 @@ const initialState = [
     beds: 2,
     bathroom: false,
     kitchen: false,
-    title: 'Room 4',
+    title: 'Rom 4',
     description: 'Very cheap sun all day',
   },
 ];
