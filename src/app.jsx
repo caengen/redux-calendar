@@ -1,6 +1,7 @@
 import React from 'react';
 import DOM from 'react-dom';
 import { Provider, connect } from 'react-redux';
+import { LoginBox } from './containers/login/LoginBox.jsx';
 import { ReservationForm } from './containers/ReservationForm.jsx';
 import { ReservationList } from './containers/ReservationList.jsx';
 import { NavigationBar } from './containers/NavigationBar.jsx';
@@ -12,9 +13,8 @@ import { createStore, combineReducers } from 'redux';
 
 const PlannerApp = () => (
   <div className="app">
-    <NavigationBar />
-    <ReservationList />
-    <ReservationForm />
+    
+    <LoginBox />
   </div>
 );
 
