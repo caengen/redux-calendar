@@ -1,0 +1,50 @@
+.loginBox {
+  margin: auto;
+  width: 30em;
+  padding: 35px;
+  background-color: $alabaster;
+  @include material-shadow;
+}
+
+.loginDescription {
+  padding: 20px;
+  padding-bottom: 0;
+  margin-bottom: 24px;
+  text-align: center;
+  border-bottom: 1px solid $iron;
+  color: $black;
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.loginForm {
+  label {
+    margin: 6px 0;
+    font-size: 0.75rem;
+    display: block;
+    color: $rolling-stone;
+  }
+
+  input {
+    @include material-input;
+    margin-bottom: 24px;
+    color: $black;
+  }
+
+  button {
+    @include button-material;
+  }
+}
+
+.loginImage {
+
+  img {
+    margin: 0 auto;
+    display: block;
+    background-color: $accent-color;
+    padding: 36px;
+    border-radius: 50%;
+  }
+}
