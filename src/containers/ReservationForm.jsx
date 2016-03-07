@@ -39,6 +39,7 @@ const Form = ({ rooms }) => {
         <details>not implemented</details>
         <label>Hvem skal du ha med?</label>
         <input type="number" name="guests" min="1" max="6" />
+        <button type="submit">Ferdig</button>
       </form>
     </div>
   );
