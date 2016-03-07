@@ -17,11 +17,11 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const Form = ({ rooms }) => {
-  const availableRooms = rooms.map((room) => {
+  const roomsMarkup = rooms.map((room) => {
     return (
       <figure>
         <img src={room.img} alt={room.title}></img>
-        <figcaption>room.title</figcaption>
+        <figcaption>{room.title}</figcaption>
       </figure>
     );
   });
@@ -35,7 +35,9 @@ const Form = ({ rooms }) => {
         <input type="date" name="start" />
         <label>til</label>
         <input type="date" name="end" />
+        <br />
         <label>Tilgjengelige rom for perioden</label>
+        {roomsMarkup}
         <details>not implemented</details>
         <label>Hvem skal du ha med?</label>
         <input type="number" name="guests" min="1" max="6" />
