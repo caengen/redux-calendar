@@ -6,6 +6,7 @@ const initialState = [
     kitchen: false,
     title: 'Rom 1',
     description: 'Great room, very cheap sun all day',
+    img: '',
   },
   {
     id: 1,
@@ -14,6 +15,7 @@ const initialState = [
     kitchen: false,
     title: 'Rom 2',
     description: 'Very big room, also very cheap sun all day',
+    img: '',
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ const initialState = [
     kitchen: true,
     title: 'Rom 3',
     description: 'Also a big room, very cheap sun all day',
+    img: '',
   },
   {
     id: 3,
@@ -30,6 +33,7 @@ const initialState = [
     kitchen: false,
     title: 'Rom 4',
     description: 'Very cheap sun all day',
+    img: '',
   },
 ];
 
