@@ -46,7 +46,9 @@ const Form = ({ rooms }) => {
   );
 };
 
-export const ReservationForm = connect(
+const ReservationForm = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Form);
+
+export default ReservationForm;

@@ -1,6 +1,5 @@
-import * as types from './constants/ActionTypes';
-import { reservationData } from './constants/Reservations';
 import initStates from './initStates';
+import * as types from '../constants/ActionTypes';
 
 const reservation = (state, action) => {
   switch (action.type) {
@@ -18,7 +17,7 @@ const reservation = (state, action) => {
   }
 };
 
-const reservations = (state = reservationData, action) => {
+const reservations = (state = initStates.reservations, action) => {
   switch (action.type) {
     case types.ADD_RESERVATION:
       return [
@@ -34,29 +33,4 @@ const reservations = (state = reservationData, action) => {
   }
 };
 
-const visibilityFilter = (state = types.ALL_RESERVATIONS_VISIBLE, action) => {
-  switch (action.type) {
-    default:
-      return action.visibilityFilter;
-  }
-};
-
-const rooms = (state = initStates.rooms, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
-
-const users = (state = initStates.users, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
-
-const reducers = {
-  users, rooms, reservations,
-};
-
-export default reducers;
+export default reservations;

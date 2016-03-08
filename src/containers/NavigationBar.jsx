@@ -37,7 +37,9 @@ const Bar = () => {
   );
 };
 
-export const NavigationBar = connect(
+const NavigationBar = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Bar);
+
+export default NavigationBar;

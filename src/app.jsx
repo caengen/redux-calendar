@@ -1,13 +1,14 @@
 import React from 'react';
 import DOM from 'react-dom';
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 
-import reducers from './reducers';
+import * as reducers from './reducers';
 import LoginBox from './containers/login/LoginBox.jsx';
-import ReservationApp from './containers/ReservationApp.jsx';
+import App from './containers/App.jsx';
+import ReservationPage from './containers/ReservationPage.jsx';
 
 const store = createStore(
   combineReducers({
@@ -21,8 +22,8 @@ const history = syncHistoryWithStore(browserHistory, store);
 DOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={ReservationApp}>
-        <IndexRoute component={ReservationApp} />
+      <Route path="/" component={App}>
+        <IndexRoute component={ReservationPage} />
       </Route>
     </Router>
   </Provider>,

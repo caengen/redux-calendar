@@ -1,9 +1,9 @@
 import React from 'react';
-import { ReservationForm } from './ReservationForm.jsx';
-import { ReservationList } from './ReservationList.jsx';
-import { NavigationBar } from './NavigationBar.jsx';
+import ReservationForm from './ReservationForm.jsx';
+import ReservationList from './ReservationList.jsx';
+import NavigationBar from './NavigationBar.jsx';
 
-const ReservationApp = () => (
+const ReservationPage = () => (
   <div className="reservation-page">
     <NavigationBar />
     <ReservationList />
@@ -11,4 +11,4 @@ const ReservationApp = () => (
   </div>
 );
 
-export default ReservationApp;
+export default ReservationPage;

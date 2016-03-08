@@ -33,7 +33,9 @@ const _ReservationList = ({ reservations }) => {
   );
 };
 
-export const ReservationList = connect(
+const ReservationList = connect(
   mapStateToProps,
   mapDispatchToProps
 )(_ReservationList);
+
+export default ReservationList;
