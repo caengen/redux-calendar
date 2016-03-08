@@ -18,7 +18,9 @@ const _LoginBox = ({ onLoginSubmit }) => {
   );
 };
 
-export const LoginBox = connect(
+const LoginBox = connect(
   undefined,
   mapDispatchToProps
 )(_LoginBox);
+
+export default LoginBox;
