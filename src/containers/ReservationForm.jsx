@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { FormCover } from './FormCover.jsx';
 
 const getAvailableRooms = (rooms) => {
   return rooms;

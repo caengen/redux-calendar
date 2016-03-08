@@ -4,18 +4,13 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
+
 import LoginBox from './containers/login/LoginBox.jsx';
 import ReservationApp from './containers/ReservationApp.jsx';
-import rooms from './reducers/rooms';
-import reservations from './reducers/reservations';
-import users from './reducers/users';
-import formCovers from './reducers/formCovers';
+import reducers from './reducers';
 
 const plannerApp = combineReducers({
-  formCovers,
-  reservations,
-  rooms,
-  users,
+  ...reducers,
 });
 
 const store = createStore(plannerApp);
