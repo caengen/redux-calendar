@@ -5,19 +5,26 @@ import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 
+import reducers from './reducers';
 import LoginBox from './containers/login/LoginBox.jsx';
 import ReservationApp from './containers/ReservationApp.jsx';
-import reducers from './reducers';
 
-const plannerApp = combineReducers({
-  ...reducers,
-});
+const store = createStore(
+  combineReducers({
+    ...reducers,
+    routing: routerReducer,
+  })
+);
 
-const store = createStore(plannerApp);
+const history = syncHistoryWithStore(browserHistory, store);
 
 DOM.render(
   <Provider store={store}>
-    <ReservationApp />
+    <Router history={history}>
+      <Route path="/" component={ReservationApp}>
+        <IndexRoute component={ReservationApp} />
+      </Route>
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
