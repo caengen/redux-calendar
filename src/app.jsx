@@ -13,8 +13,9 @@ import { createStore, combineReducers } from 'redux';
 
 const PlannerApp = () => (
   <div className="app">
-    
-    <LoginBox />
+    <NavigationBar />
+    <ReservationList />
+    <ReservationForm />
   </div>
 );
 
