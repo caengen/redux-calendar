@@ -41,28 +41,30 @@ const mapDispatchToProps = (dispatch) => {
 const ListItem = ({ reservation, users, rooms }) => {
   return (
     <li>
-        <header className='reservation'>
-          <figure>
-            <strong>{initials(name(reservation.reserverId, users))}</strong>
-          </figure>
-        </header>
-        <div className='li-content'>
-          <div className='reserver'>
-            <span>{`${users[reservation.reserverId].firstName}
-              ${users[reservation.reserverId].lastName}`}</span>
-            <small>{pretty(reservation.timestamp)}</small>
-          </div>
-          <div className='room'>
-            <span>{rooms[reservation.roomId].title}</span>
-            <small>{`${pretty(reservation.date.start)} - ${pretty(reservation.date.end)}`}</small>
-          </div>
-          <div className='guests'>
-            <span className='label'>{'Gjester: '}</span>
-            <ul className='ul-guests'>
-              {guests(reservation.guestIds, users)}
-            </ul>
-          </div>
+      <header className='reservation'>
+        <figure>
+          <strong>{initials(name(reservation.reserverId, users))}</strong>
+        </figure>
+      </header>
+      <div className='li-content'>
+        <div className='reserver'>
+          <span>{`${users[reservation.reserverId].firstName}
+            ${users[reservation.reserverId].lastName}`}</span>
+          <small>{pretty(reservation.timestamp)}</small>
         </div>
+        <div className='room'>
+          <span>{rooms[reservation.roomId].title}</span>
+          <small>
+            {`${pretty(reservation.date.start)} - ${pretty(reservation.date.end)}`}
+          </small>
+        </div>
+        <div className='guests'>
+          <span className='label'>{'Gjester: '}</span>
+          <ul className='ul-guests'>
+            {guests(reservation.guestIds, users)}
+          </ul>
+        </div>
+      </div>
     </li>
   );
 };

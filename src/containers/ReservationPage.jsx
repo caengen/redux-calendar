@@ -4,7 +4,7 @@ import ReservationList from './ReservationList.jsx';
 import NavigationBar from './NavigationBar.jsx';
 
 const ReservationPage = () => (
-  <div className="reservation-page">
+  <div className='reservation-page'>
     <NavigationBar />
     <ReservationList />
     <ReservationForm />

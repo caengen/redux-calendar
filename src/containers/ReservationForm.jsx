@@ -26,21 +26,21 @@ const Form = ({ rooms }) => {
   });
 
   return (
-    <div className="reservation-form">
+    <div className='reservation-form'>
       <h1>Opprett ny reservasjon</h1>
       <h2>vis bruker her</h2>
       <form>
         <label>Reservasjon fra</label>
-        <input type="date" name="start" />
+        <input type='date' name='start' />
         <label>til</label>
-        <input type="date" name="end" />
+        <input type='date' name='end' />
         <br />
         <label>Tilgjengelige rom for perioden</label>
         {roomsMarkup}
         <details>not implemented</details>
         <label>Hvem skal du ha med?</label>
-        <input type="number" name="guests" min="1" max="6" />
-        <button type="submit">Ferdig</button>
+        <input type='number' name='guests' min='1' max='6' />
+        <button type='submit'>Ferdig</button>
       </form>
     </div>
   );

@@ -10,7 +10,7 @@ export const login = (username, password) => {
     },
   }))
   .then((response) => {
-    let jwt = response.id_token;
+    let jwt = response.idToken;
     LoginActions.loginUser(jwt);
     return true;
   });

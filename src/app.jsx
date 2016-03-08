@@ -22,7 +22,7 @@ const history = syncHistoryWithStore(browserHistory, store);
 DOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={App}>
+      <Route path='/' component={App}>
         <IndexRoute component={ReservationPage} />
       </Route>
     </Router>

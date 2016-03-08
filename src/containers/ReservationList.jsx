@@ -22,7 +22,7 @@ const _ReservationList = ({ reservations }) => {
   });
 
   return (
-    <div className="reservation-list">
+    <div className='reservation-list'>
       <ReservationListFilter />
       <section>
         <ul>

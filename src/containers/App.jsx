@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const App = (children) => (
-  <div className="app">
+  <div className='app'>
     {children}
   </div>
 );
